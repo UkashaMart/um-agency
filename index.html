@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="UM Agency — Full-Service Digital Agency offering Software Engineering, SEO, Guest Posting, Web Development, Mobile Apps, AI Automation, and more. Serving clients worldwide.">
+<meta name="keywords" content="digital agency, guest posting, SEO services, web development, software engineering, mobile app development, AI automation, worldwide">
+<meta property="og:title" content="UM Agency — Full-Service Digital Agency">
+<meta property="og:description" content="Software Engineering, SEO, Guest Posting, Web Development & More. Serving clients worldwide.">
+<meta property="og:url" content="https://agency.ukashamart.com">
+<title>UM Agency — Full-Service Digital Agency</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --gold: #C8952A; --gold-lt: #E8B84B;
+  --gold-bg: rgba(200,149,42,0.08); --gold-bdr: rgba(200,149,42,0.22);
+  --bg: #080810; --bg1: #0c0c16; --bg2: #11111c; --bg3: #18182a; --bg4: #1f1f30;
+  --line: rgba(255,255,255,0.07); --line2: rgba(255,255,255,0.14);
+  --t0: #EEEEF5; --t1: rgba(238,238,245,0.65); --t2: rgba(238,238,245,0.35); --t3: rgba(238,238,245,0.14);
+  --green: #22c55e; --green-bg: rgba(34,197,94,0.1); --green-bdr: rgba(34,197,94,0.25);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--t0); -webkit-font-smoothing: antialiased; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: var(--bg); } ::-webkit-scrollbar-thumb { background: var(--gold-bdr); border-radius: 3px; }
+
+/* ── NAV ── */
+.nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 60px; background: rgba(8,8,16,0.95); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
+.nav-logo { font-size: 17px; font-weight: 900; letter-spacing: -0.5px; text-decoration: none; color: var(--t0); }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 1.8rem; }
+.nav-links a { color: var(--t1); text-decoration: none; font-size: 13px; font-weight: 500; transition: color .18s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-actions { display: flex; gap: 8px; align-items: center; }
+.nav-wa { display: flex; align-items: center; gap: 5px; background: var(--green-bg); border: 1px solid var(--green-bdr); color: var(--green); padding: 7px 14px; border-radius: 7px; font-size: 12px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: background .18s; }
+.nav-wa:hover { background: rgba(34,197,94,0.18); }
+.nav-cta { background: var(--gold); color: #060400; border: none; padding: 7px 18px; border-radius: 7px; font-size: 13px; font-weight: 800; cursor: pointer; transition: background .18s; }
+.nav-cta:hover { background: var(--gold-lt); }
+.nav-hamburger { display: none; background: none; border: none; color: var(--t0); font-size: 22px; cursor: pointer; }
+
+/* ── HERO ── */
+.hero { padding: 6rem 2.5rem 5rem; text-align: center; position: relative; overflow: hidden; }
+.hero-glow { position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 800px; height: 600px; background: radial-gradient(ellipse, rgba(200,149,42,0.06) 0%, transparent 65%); pointer-events: none; }
+.hero-pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--gold-bdr); background: var(--gold-bg); border-radius: 99px; padding: 5px 16px 5px 10px; font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1.8rem; }
+.hero-pill-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.3)} }
+.hero h1 { font-size: 54px; font-weight: 900; line-height: 1.04; letter-spacing: -2.5px; max-width: 750px; margin: 0 auto 1.2rem; }
+.hero h1 .gold { color: var(--gold); }
+.hero-sub { font-size: 16px; color: var(--t1); line-height: 1.75; max-width: 500px; margin: 0 auto 2.2rem; }
+.hero-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 3.5rem; }
+.btn-gold { background: var(--gold); color: #060400; border: none; padding: 13px 30px; border-radius: 9px; font-size: 14px; font-weight: 800; cursor: pointer; transition: background .18s; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
+.btn-gold:hover { background: var(--gold-lt); }
+.btn-outline { background: transparent; color: var(--t0); border: 1px solid var(--line2); padding: 13px 28px; border-radius: 9px; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; transition: border-color .18s; }
+.btn-outline:hover { border-color: var(--gold-bdr); }
+.btn-wa { display: inline-flex; align-items: center; gap: 7px; background: var(--green-bg); border: 1px solid var(--green-bdr); color: var(--green); padding: 13px 22px; border-radius: 9px; font-size: 14px; font-weight: 700; text-decoration: none; transition: background .18s; }
+.btn-wa:hover { background: rgba(34,197,94,0.18); }
+.hero-stats { display: inline-flex; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--bg2); }
+.hstat { padding: 18px 32px; text-align: center; border-right: 1px solid var(--line); }
+.hstat:last-child { border-right: none; }
+.hstat-n { font-size: 26px; font-weight: 900; color: var(--gold); line-height: 1; }
+.hstat-l { font-size: 10px; color: var(--t2); text-transform: uppercase; letter-spacing: .07em; margin-top: 4px; }
+
+/* ── TRUST BAR ── */
+.trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg1); padding: 1rem 2.5rem; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.trust-lbl { font-size: 10px; color: var(--t2); text-transform: uppercase; letter-spacing: .1em; }
+.trust-chip { font-size: 12px; color: var(--t1); border: 1px solid var(--line); background: var(--bg2); border-radius: 99px; padding: 4px 13px; }
+
+/* ── SECTIONS ── */
+.s { padding: 5rem 2.5rem; }
+.s.alt { background: var(--bg1); }
+.s-eye { font-size: 10px; font-weight: 800; color: var(--gold); text-transform: uppercase; letter-spacing: .12em; margin-bottom: 6px; }
+.s-title { font-size: 30px; font-weight: 900; letter-spacing: -.7px; margin-bottom: 10px; }
+.s-sub { font-size: 14px; color: var(--t1); line-height: 1.75; max-width: 500px; margin-bottom: 2.5rem; }
+.s-bar { width: 34px; height: 3px; background: var(--gold); border-radius: 2px; margin-bottom: 12px; }
+
+/* ── SERVICES GRID ── */
+.grid-12 { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px,1fr)); gap: 12px; }
+.svc { background: var(--bg2); border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem; transition: border-color .2s, background .2s; }
+.svc:hover { border-color: var(--gold-bdr); background: var(--bg3); }
+.svc-ico { width: 42px; height: 42px; border-radius: 11px; background: var(--gold-bg); border: 1px solid var(--gold-bdr); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+.svc-ico i { font-size: 20px; color: var(--gold); }
+.svc-name { font-size: 14px; font-weight: 800; margin-bottom: 3px; }
+.svc-cat { font-size: 10px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: .07em; margin-bottom: 9px; }
+.svc-desc { font-size: 12px; color: var(--t1); line-height: 1.65; margin-bottom: 11px; }
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.tag { font-size: 10px; padding: 2px 8px; background: var(--bg4); border: 1px solid var(--line); border-radius: 5px; color: var(--t2); }
+
+/* ── PROCESS ── */
+.grid-proc { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px,1fr)); gap: 12px; }
+.proc { background: var(--bg2); border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem; position: relative; }
+.proc-n { font-size: 46px; font-weight: 900; color: rgba(200,149,42,.08); line-height: 1; margin-bottom: 8px; }
+.proc-badge { position: absolute; top: 14px; right: 14px; width: 23px; height: 23px; border-radius: 50%; background: var(--gold); color: #060400; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 900; }
+.proc-title { font-size: 14px; font-weight: 800; margin-bottom: 6px; }
+.proc-desc { font-size: 12px; color: var(--t1); line-height: 1.65; }
+
+/* ── GUEST POSTING SITES ── */
+.gp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(235px,1fr)); gap: 12px; }
+.gp { background: var(--bg2); border: 1px solid var(--line); border-radius: 14px; padding: 1.2rem; transition: border-color .2s; }
+.gp:hover { border-color: var(--gold-bdr); }
+.gp-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.gp-ico { width: 38px; height: 38px; border-radius: 9px; background: var(--gold-bg); border: 1px solid var(--gold-bdr); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.gp-ico i { font-size: 18px; color: var(--gold); }
+.gp-domain { font-size: 13px; font-weight: 800; line-height: 1.3; }
+.gp-niche { font-size: 10px; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.gp-metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 10px; }
+.gpm { background: var(--bg3); border-radius: 8px; padding: 7px 4px; text-align: center; }
+.gpm-v { font-size: 14px; font-weight: 800; }
+.gpm-l { font-size: 9px; color: var(--t2); text-transform: uppercase; letter-spacing: .05em; margin-top: 1px; }
+.gp-foot { display: flex; align-items: center; justify-content: space-between; }
+.gp-status { display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; }
+.dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.dot.g { background: var(--green); }
+.dot.y { background: #f59e0b; }
+.gp-link { font-size: 11px; font-weight: 700; color: var(--gold); background: var(--gold-bg); border: 1px solid var(--gold-bdr); border-radius: 5px; padding: 3px 10px; text-decoration: none; transition: background .18s; }
+.gp-link:hover { background: rgba(200,149,42,0.15); }
+.gp-notice { margin-top: 14px; padding: 14px 16px; background: var(--gold-bg); border: 1px solid var(--gold-bdr); border-radius: 11px; display: flex; align-items: flex-start; gap: 10px; }
+.gp-notice i { font-size: 18px; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+.gp-notice p { font-size: 12px; color: var(--t1); line-height: 1.65; }
+.gp-notice a { color: var(--gold); font-weight: 700; text-decoration: none; }
+
+/* ── PORTFOLIO ── */
+.port-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px,1fr)); gap: 14px; }
+.port { background: var(--bg2); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: border-color .2s, transform .2s; cursor: pointer; }
+.port:hover { border-color: var(--gold-bdr); transform: translateY(-3px); }
+.port-thumb { height: 150px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
+.port-thumb i { font-size: 50px; }
+.port-thumb-label { position: absolute; top: 10px; right: 10px; background: var(--gold); color: #060400; font-size: 9px; font-weight: 900; text-transform: uppercase; letter-spacing: .07em; padding: 3px 9px; border-radius: 99px; }
+.port-body { padding: 1.3rem; }
+.port-type { font-size: 10px; color: var(--gold); font-weight: 800; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 5px; }
+.port-name { font-size: 15px; font-weight: 800; margin-bottom: 7px; }
+.port-desc { font-size: 12px; color: var(--t1); line-height: 1.65; margin-bottom: 11px; }
+.port-results { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.port-result { font-size: 11px; color: var(--green); background: var(--green-bg); border: 1px solid var(--green-bdr); border-radius: 5px; padding: 2px 8px; font-weight: 700; }
+.port-cta { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--gold); font-weight: 700; text-decoration: none; }
+.port-cta i { font-size: 14px; }
+
+/* ── PORTFOLIO MODAL ── */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(6px); }
+.modal-overlay.open { display: flex; }
+.modal { background: var(--bg2); border: 1px solid var(--line2); border-radius: 18px; max-width: 620px; width: 90%; max-height: 85vh; overflow-y: auto; padding: 2rem; position: relative; }
+.modal-close { position: absolute; top: 14px; right: 14px; background: var(--bg3); border: 1px solid var(--line); border-radius: 7px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--t1); font-size: 16px; }
+.modal-thumb { height: 160px; border-radius: 11px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.3rem; border: 1px solid var(--line); }
+.modal-type { font-size: 10px; color: var(--gold); font-weight: 800; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+.modal-title { font-size: 20px; font-weight: 900; margin-bottom: 8px; }
+.modal-desc { font-size: 13px; color: var(--t1); line-height: 1.75; margin-bottom: 1.2rem; }
+.modal-section { font-size: 11px; font-weight: 800; color: var(--gold); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; margin-top: 1rem; }
+.modal-results { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 1rem; }
+.modal-result { font-size: 12px; color: var(--green); background: var(--green-bg); border: 1px solid var(--green-bdr); border-radius: 6px; padding: 4px 11px; font-weight: 700; }
+
+/* ── TECH STACK ── */
+.grid-tech { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px,1fr)); gap: 8px; }
+.tech { background: var(--bg2); border: 1px solid var(--line); border-radius: 11px; padding: 14px 8px; text-align: center; transition: border-color .2s; }
+.tech:hover { border-color: var(--gold-bdr); }
+.tech i { font-size: 22px; color: var(--gold); display: block; margin-bottom: 6px; }
+.tech span { font-size: 11px; color: var(--t1); }
+
+/* ── PRICING ── */
+.grid-price { display: grid; grid-template-columns: repeat(auto-fill, minmax(225px,1fr)); gap: 12px; }
+.plan { background: var(--bg2); border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; transition: border-color .2s; }
+.plan.hot { border-color: var(--gold); background: var(--bg3); }
+.plan-badge { display: inline-block; background: var(--gold); color: #060400; font-size: 9px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; padding: 3px 11px; border-radius: 99px; width: fit-content; margin-bottom: 10px; }
+.plan-name { font-size: 13px; color: var(--t2); font-weight: 700; margin-bottom: 8px; }
+.plan-feats { display: flex; flex-direction: column; gap: 7px; flex: 1; margin-bottom: 1.2rem; }
+.plan-feat { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--t1); }
+.plan-feat i { font-size: 13px; color: var(--green); flex-shrink: 0; }
+.plan-footer { border-top: 1px solid var(--line); padding-top: 14px; }
+.plan-msg { font-size: 12px; color: var(--t1); margin-bottom: 10px; line-height: 1.5; }
+.plan-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.plan-wa { display: flex; align-items: center; justify-content: center; gap: 6px; background: var(--green-bg); border: 1px solid var(--green-bdr); color: var(--green); padding: 9px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; cursor: pointer; transition: background .18s; }
+.plan-wa:hover { background: rgba(34,197,94,.2); }
+.plan-em { display: flex; align-items: center; justify-content: center; gap: 6px; background: var(--gold-bg); border: 1px solid var(--gold-bdr); color: var(--gold); padding: 9px; border-radius: 8px; font-size: 12px; font-weight: 800; text-decoration: none; cursor: pointer; transition: background .18s; }
+.plan-em:hover { background: rgba(200,149,42,.18); }
+
+/* ── TESTIMONIALS ── */
+.grid-test { display: grid; grid-template-columns: repeat(auto-fill, minmax(245px,1fr)); gap: 12px; }
+.tcard { background: var(--bg2); border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem; }
+.tcard-stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; margin-bottom: 10px; }
+.tcard-q { font-size: 13px; color: var(--t1); line-height: 1.72; font-style: italic; margin-bottom: 14px; }
+.tcard-author { display: flex; align-items: center; gap: 10px; }
+.av { width: 36px; height: 36px; border-radius: 50%; background: var(--gold-bg); border: 1px solid var(--gold-bdr); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 900; color: var(--gold); flex-shrink: 0; }
+.av-name { font-size: 13px; font-weight: 800; }
+.av-co { font-size: 11px; color: var(--t2); }
+
+/* ── WHY US ── */
+.grid-why { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 12px; }
+.why { display: flex; gap: 13px; align-items: flex-start; }
+.why-ico { width: 40px; height: 40px; border-radius: 10px; background: var(--gold-bg); border: 1px solid var(--gold-bdr); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.why-ico i { font-size: 18px; color: var(--gold); }
+.why-title { font-size: 13px; font-weight: 800; margin-bottom: 4px; }
+.why-desc { font-size: 12px; color: var(--t1); line-height: 1.65; }
+
+/* ── TEAM ── */
+.grid-team { display: grid; grid-template-columns: repeat(auto-fill, minmax(145px,1fr)); gap: 12px; }
+.tm { background: var(--bg2); border: 1px solid var(--line); border-radius: 14px; padding: 1.4rem; text-align: center; }
+.tm-av { width: 54px; height: 54px; border-radius: 50%; background: var(--gold-bg); border: 2px solid var(--gold-bdr); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 900; color: var(--gold); margin: 0 auto 10px; }
+.tm-name { font-size: 13px; font-weight: 800; margin-bottom: 3px; }
+.tm-role { font-size: 10px; color: var(--gold); text-transform: uppercase; letter-spacing: .06em; font-weight: 700; margin-bottom: 9px; }
+
+/* ── FAQ ── */
+.faq-list { max-width: 700px; display: flex; flex-direction: column; gap: 8px; }
+.faq { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.faq-q { display: flex; justify-content: space-between; align-items: center; padding: 15px 17px; font-size: 13px; font-weight: 600; cursor: pointer; gap: 12px; user-select: none; }
+.faq-q i { font-size: 16px; color: var(--gold); flex-shrink: 0; transition: transform .2s; }
+.faq.open .faq-q i { transform: rotate(45deg); }
+.faq-a { font-size: 13px; color: var(--t1); line-height: 1.72; padding: 0 17px 15px; display: none; }
+.faq.open .faq-a { display: block; }
+
+/* ── CONTACT ── */
+.contact-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 2.5rem; align-items: start; }
+.ci-list { display: flex; flex-direction: column; gap: 12px; margin-top: 1.5rem; }
+.ci { display: flex; align-items: center; gap: 12px; }
+.ci-ico { width: 40px; height: 40px; border-radius: 10px; background: var(--gold-bg); border: 1px solid var(--gold-bdr); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ci-ico i { font-size: 18px; color: var(--gold); }
+.ci-lbl { font-size: 10px; color: var(--t2); text-transform: uppercase; letter-spacing: .07em; }
+.ci-val { font-size: 13px; font-weight: 700; color: var(--t0); }
+.cf { background: var(--bg2); border: 1px solid var(--line); border-radius: 18px; padding: 1.8rem; }
+.cf-title { font-size: 16px; font-weight: 900; margin-bottom: 5px; }
+.cf-sub { font-size: 12px; color: var(--t1); margin-bottom: 1.3rem; line-height: 1.6; }
+.cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.cf input, .cf select, .cf textarea { width: 100%; background: var(--bg3); border: 1px solid var(--line); border-radius: 9px; padding: 11px 13px; color: var(--t0); font-size: 13px; outline: none; margin-bottom: 9px; font-family: inherit; transition: border-color .18s; }
+.cf input:focus, .cf select:focus, .cf textarea:focus { border-color: var(--gold-bdr); }
+.cf input::placeholder, .cf textarea::placeholder { color: var(--t2); }
+.cf select option { background: var(--bg2); }
+.cf textarea { height: 95px; resize: none; }
+.cf-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.cf-wa-btn { display: flex; align-items: center; justify-content: center; gap: 7px; background: var(--green-bg); border: 1px solid var(--green-bdr); color: var(--green); padding: 12px; border-radius: 9px; font-size: 13px; font-weight: 800; text-decoration: none; cursor: pointer; transition: background .18s; }
+.cf-wa-btn:hover { background: rgba(34,197,94,.2); }
+.cf-em-btn { display: flex; align-items: center; justify-content: center; gap: 7px; background: var(--gold); color: #060400; border: none; padding: 12px; border-radius: 9px; font-size: 13px; font-weight: 800; cursor: pointer; transition: background .18s; }
+.cf-em-btn:hover { background: var(--gold-lt); }
+
+/* ── FOOTER ── */
+.footer { background: #050508; border-top: 1px solid var(--line); padding: 3.5rem 2.5rem 1.8rem; }
+.ft-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+.ft-logo { font-size: 17px; font-weight: 900; margin-bottom: 8px; color: var(--t0); }
+.ft-logo span { color: var(--gold); }
+.ft-desc { font-size: 12px; color: var(--t2); line-height: 1.7; margin-bottom: 14px; }
+.ft-soc { display: flex; gap: 7px; }
+.fsi { width: 32px; height: 32px; border-radius: 8px; background: var(--bg2); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: border-color .18s; }
+.fsi:hover { border-color: var(--gold-bdr); }
+.fsi i { font-size: 15px; color: var(--t1); }
+.ft-col h4 { font-size: 10px; font-weight: 800; color: var(--gold); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 13px; }
+.ft-col a { display: block; font-size: 12px; color: var(--t2); text-decoration: none; margin-bottom: 8px; transition: color .18s; }
+.ft-col a:hover { color: var(--t0); }
+.ft-bottom { border-top: 1px solid var(--line); padding-top: 1.3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.ft-bottom p { font-size: 11px; color: var(--t2); }
+.ft-bottom span { color: var(--gold); }
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: block; }
+  .hero h1 { font-size: 34px; letter-spacing: -1px; }
+  .hero-stats { flex-wrap: wrap; }
+  .hstat { padding: 14px 20px; }
+  .contact-wrap { grid-template-columns: 1fr; }
+  .cf-row { grid-template-columns: 1fr; }
+  .cf-btns { grid-template-columns: 1fr; }
+  .ft-grid { grid-template-columns: 1fr 1fr; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .s { padding: 3.5rem 1.2rem; }
+  .nav { padding: 0 1.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <a class="nav-logo" href="#">UM<span>Agency</span></a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#gp-sites">Guest Posting</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <a class="nav-wa" href="https://wa.me/923351650895"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Us</button>
+    <button class="nav-hamburger" onclick="toggleMenu()"><i class="ti ti-menu-2"></i></button>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-pill"><span class="hero-pill-dot"></span>Full-Service Digital Agency · Worldwide</div>
+  <h1>We Build, Rank &<br>Scale Your <span class="gold">Digital Business</span></h1>
+  <p class="hero-sub">From software engineering to SEO, guest posting to AI automation — everything your business needs to dominate online. Serving clients worldwide.</p>
+  <div class="hero-btns">
+    <a class="btn-gold" href="#services"><i class="ti ti-bolt"></i>Explore Services</a>
+    <a class="btn-outline" href="#portfolio"><i class="ti ti-eye"></i>View Portfolio</a>
+    <a class="btn-wa" href="https://wa.me/923351650895"><i class="ti ti-brand-whatsapp"></i>+92 335 1650895</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hstat"><div class="hstat-n">500+</div><div class="hstat-l">Projects Done</div></div>
+    <div class="hstat"><div class="hstat-n">300+</div><div class="hstat-l">Happy Clients</div></div>
+    <div class="hstat"><div class="hstat-n">5K+</div><div class="hstat-l">Links Built</div></div>
+    <div class="hstat"><div class="hstat-n">5+</div><div class="hstat-l">Years Exp.</div></div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust">
+  <span class="trust-lbl">Trusted by</span>
+  <span class="trust-chip">EasyRest.com</span>
+  <span class="trust-chip">SIIT.co</span>
+  <span class="trust-chip">RabbiIT Firm</span>
+  <span class="trust-chip">Post Market Publishing</span>
+  <span class="trust-chip">ukashamart.com</span>
+  <span class="trust-chip">300+ Global Clients</span>
+</div>
+
+<!-- ── SERVICES ── -->
+<section class="s" id="services">
+  <div class="s-bar"></div>
+  <div class="s-eye">What We Do</div>
+  <div class="s-title">All Services</div>
+  <div class="s-sub">End-to-end digital solutions — from code to content to rankings. We serve clients across all industries worldwide.</div>
+  <div class="grid-12">
+    <div class="svc"><div class="svc-ico"><i class="ti ti-code"></i></div><div class="svc-name">Software Engineering</div><div class="svc-cat">Development</div><div class="svc-desc">Custom software, scalable APIs, microservices, databases, and full-stack apps built to enterprise standards.</div><div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">Next.js</span><span class="tag">PostgreSQL</span></div></div>
+    <div class="svc"><div class="svc-ico"><i class="ti ti-layout"></i></div><div class="svc-name">Web Development</div><div class="svc-cat">Development</div><div class="svc-desc">Fast, SEO-ready websites — WordPress, custom CMS, landing pages, corporate sites, and e-commerce stores.</div><div class="tags"><span class="tag">WordPress</span><span class="tag">Next.js</span><span class="tag">Shopify</span><span class="tag">WooCommerce</span></div></div>
+    <div class="svc"><div class="svc-ico"><i class="ti ti-device-mobile"></i></div><div class="svc-name">Mobile App Dev</div><div class="svc-cat">Development</div><div class="svc-desc">iOS and Android apps with React Native and Flutter — from MVP to full production launch.</div><div class="tags"><span class="tag">React Native</span><span class="tag">Flutter</span><span class="tag">iOS</span><span class="tag">Android</span></div></div>
+    <div class="svc"><div class="svc-ico"><i class="ti ti-notebook"></i></div><div class="svc-name">Guest Posting</div><div class="svc-cat">SEO & Links</div><div class="svc-desc">High-DA backlinks from real niche sites via 100% manual outreach. White hat only, no PBNs ever.</div><div class="tags"><span class="tag">DA 20–80+</span><span class="tag">Niche Relevant</span><span class="tag">White Hat</span></div></div>
+    <div class="svc"><div class="svc-ico"><i class="ti ti-chart-line"></i></div><div class="svc-name">SEO Services</div><div class="svc-cat">SEO & Links</div><div class="svc-desc">On-page, technical SEO, keyword research, link building, and rank tracking to dominate Google worldwide.</div><div class="tags"><span class="tag">On-Page</span><span class="tag">Technical SEO</span><span class="tag">Local SEO</span></div></div>
+    <div class="svc"><div class="svc-ico"><i class="ti ti-writing"></i></div><div class="svc-name">Content Writing</div><div class="svc-cat">Content</div><div class="svc-desc">SEO-optimized blogs, articles, website copywriting, product descriptions, and press releases by expert writers.</div><div class="tags"><span class="tag">Blog Posts</span><span class="tag">Copywriting</span><span class="tag">Press Release</span></div></div>
+    <div class="svc"><div class="svc-ico"><i class="ti ti-speakerphone"></i></div><div class="svc-name">Digital Marketing</div><div class="svc-cat">Marketing</div><div class="svc-desc">Facebook Ads, Google Ads, email campaigns, and full social media management to grow your brand globally.</div><div class="tags"><span class="tag">Facebook Ads</span><span class="tag">Google Ads</span><span class="tag">Email Marketing</span></div></div>
+    <div class="svc"><div class="svc-ico"><i class="ti ti-palette"></i></div><div class="svc-name">UI/UX Design</div><div class="svc-cat">Design</div><div class="svc-desc">Figma designs, wireframes, prototypes, brand identity, logos, and complete design systems.</div><div class="tags"><span class="tag">Figma</span><span class="tag">Branding</span><span class="tag">Logo Design</span></div></div>
+    <div class="svc"><div class="svc-ico"><i class="ti ti-robot"></i></div><div class="svc-name">AI & Automation</div><div class="svc-cat">Tech</div><div class="svc-desc">AI chatbots, CRM automation, workflow tools, and smart API integrations to streamline your business.</div><div class="tags"><span class="tag">Claude API</span><span class="tag">Zapier</span><span class="tag">Make.com</span></div></div>
+    <div class="svc"><div class="svc-ico"><i class="ti ti-server"></i></div><div class="svc-name">Cloud & DevOps</div><div class="svc-cat">Tech</div><div class="svc-desc">AWS, Vercel, Cloudflare, CI/CD pipelines, Docker containers, and server optimization for production-grade apps.</div><div class="tags"><span class="tag">AWS</span><span class="tag">Vercel</span><span class="tag">Docker</span><span class="tag">CI/CD</span></div></div>
+    <div class="svc"><div class="svc-ico"><i class="ti ti-shield-check"></i></div><div class="svc-name">Cybersecurity</div><div class="svc-cat">Tech</div><div class="svc-desc">Security audits, SSL setup, vulnerability testing, firewall configuration, and continuous monitoring.</div><div class="tags"><span class="tag">Pen Testing</span><span class="tag">SSL</span><span class="tag">Firewall</span></div></div>
+    <div class="svc"><div class="svc-ico"><i class="ti ti-shopping-cart"></i></div><div class="svc-name">E-Commerce</div><div class="svc-cat">Development</div><div class="svc-desc">Complete stores with payment gateways, inventory systems, product listings, and conversion optimization.</div><div class="tags"><span class="tag">Shopify</span><span class="tag">WooCommerce</span><span class="tag">Stripe</span></div></div>
+  </div>
+</section>
+
+<!-- ── HOW WE WORK ── -->
+<section class="s alt">
+  <div class="s-bar"></div>
+  <div class="s-eye">Our Process</div>
+  <div class="s-title">How We Work</div>
+  <div class="s-sub">Simple, transparent, and results-driven from day one.</div>
+  <div class="grid-proc">
+    <div class="proc"><div class="proc-n">01</div><div class="proc-badge">1</div><div class="proc-title">Free Discovery Call</div><div class="proc-desc">We understand your goals, audience, budget, and timeline via WhatsApp or email.</div></div>
+    <div class="proc"><div class="proc-n">02</div><div class="proc-badge">2</div><div class="proc-title">Custom Proposal</div><div class="proc-desc">A tailored plan with clear deliverables, milestones, and pricing — no generic packages.</div></div>
+    <div class="proc"><div class="proc-n">03</div><div class="proc-badge">3</div><div class="proc-title">Expert Execution</div><div class="proc-desc">Our specialist team executes with precision — weekly updates and full transparency.</div></div>
+    <div class="proc"><div class="proc-n">04</div><div class="proc-badge">4</div><div class="proc-title">Delivery & Support</div><div class="proc-desc">On-time delivery, feedback rounds, and ongoing post-launch support included.</div></div>
+  </div>
+</section>
+
+<!-- ── GUEST POSTING SITES ── -->
+<section class="s" id="gp-sites">
+  <div class="s-bar"></div>
+  <div class="s-eye">Guest Posting Network</div>
+  <div class="s-title">Our Publishing Sites</div>
+  <div class="s-sub">Real niche-relevant websites with genuine organic traffic. Manual outreach only — no PBNs, ever. New sites added daily.</div>
+  <div class="gp-grid" id="gp-container">
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-cpu"></i></div><div><div class="gp-domain">TechBlogHub.com</div><div class="gp-niche">Technology</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">52</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">18K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR45</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot g"></span>Accepting Posts</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-heart-rate-monitor"></i></div><div><div class="gp-domain">HealthWellnessNow.com</div><div class="gp-niche">Health & Wellness</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">48</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">22K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR40</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot g"></span>Accepting Posts</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-building-bank"></i></div><div><div class="gp-domain">BusinessInsiderPro.net</div><div class="gp-niche">Business & Finance</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">61</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">35K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR55</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot g"></span>Accepting Posts</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-trending-up"></i></div><div><div class="gp-domain">DigitalMarketingEdge.com</div><div class="gp-niche">Marketing & SEO</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">55</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">28K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR50</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot g"></span>Accepting Posts</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-home"></i></div><div><div class="gp-domain">HomeDecorTrends.co</div><div class="gp-niche">Home & Lifestyle</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">38</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">9K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR32</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot g"></span>Accepting Posts</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-plane"></i></div><div><div class="gp-domain">TravelWorldGuide.net</div><div class="gp-niche">Travel & Tourism</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">46</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">16K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR42</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot g"></span>Accepting Posts</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-scale"></i></div><div><div class="gp-domain">LawFirmInsights.com</div><div class="gp-niche">Legal & Law</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">57</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">24K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR52</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot y"></span>Limited Slots</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-building"></i></div><div><div class="gp-domain">RealEstateDaily.io</div><div class="gp-niche">Real Estate</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">43</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">12K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR38</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot g"></span>Accepting Posts</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-school"></i></div><div><div class="gp-domain">EduTechWorld.com</div><div class="gp-niche">Education & EdTech</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">50</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">20K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR44</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot g"></span>Accepting Posts</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-device-gamepad-2"></i></div><div><div class="gp-domain">GamingUnlocked.io</div><div class="gp-niche">Gaming & Tech</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">44</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">14K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR38</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot y"></span>Limited Slots</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-scissors"></i></div><div><div class="gp-domain">FashionForwardMag.com</div><div class="gp-niche">Fashion & Beauty</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">41</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">11K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR36</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot g"></span>Accepting Posts</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+    <div class="gp"><div class="gp-head"><div class="gp-ico"><i class="ti ti-leaf"></i></div><div><div class="gp-domain">CbdHealthReview.co</div><div class="gp-niche">CBD & Wellness</div></div></div><div class="gp-metrics"><div class="gpm"><div class="gpm-v">39</div><div class="gpm-l">DA</div></div><div class="gpm"><div class="gpm-v">8K</div><div class="gpm-l">Traffic</div></div><div class="gpm"><div class="gpm-v">DR34</div><div class="gpm-l">Ahrefs</div></div></div><div class="gp-foot"><span class="gp-status"><span class="dot g"></span>Accepting Posts</span><a class="gp-link" href="https://wa.me/923351650895">Get Link</a></div></div>
+  </div>
+  <div class="gp-notice">
+    <i class="ti ti-info-circle"></i>
+    <p>We have <strong>200+ more sites</strong> across 30+ niches with new sites added daily — Tech, Finance, Health, Travel, Fashion, Law, Real Estate, CBD, Casino & more. <a href="https://wa.me/923351650895">WhatsApp us</a> with your niche for a full live list with pricing.</p>
+  </div>
+</section>
+
+<!-- ── PORTFOLIO ── -->
+<section class="s alt" id="portfolio">
+  <div class="s-bar"></div>
+  <div class="s-eye">Our Work</div>
+  <div class="s-title">Portfolio</div>
+  <div class="s-sub">Real projects, real results — click any project to see full details.</div>
+  <div class="port-grid">
+    <div class="port" onclick="openModal('p1')">
+      <div class="port-thumb" style="background:#0f0f00;"><i class="ti ti-tools" style="color:#C8952A;"></i><span class="port-thumb-label">Live</span></div>
+      <div class="port-body"><div class="port-type">Web App · Tools Platform</div><div class="port-name">UM Tools — ukashamart.com</div><div class="port-desc">21 free online utility tools with 23 SEO-optimized blog posts. Google Analytics & AdSense integrated.</div><div class="port-results"><span class="port-result">21 Tools</span><span class="port-result">23 Blog Posts</span><span class="port-result">PageSpeed 96</span></div><div class="tags"><span class="tag">Next.js</span><span class="tag">Vercel</span><span class="tag">Cloudflare</span></div><div style="height:10px;"></div><span class="port-cta">View Details <i class="ti ti-arrow-right"></i></span></div>
+    </div>
+    <div class="port" onclick="openModal('p2')">
+      <div class="port-thumb" style="background:#001500;"><i class="ti ti-link" style="color:#22c55e;"></i><span class="port-thumb-label">Ongoing</span></div>
+      <div class="port-body"><div class="port-type">Link Building · Guest Posting</div><div class="port-name">5K+ Backlinks Campaign</div><div class="port-desc">Managed 1,500+ email negotiations across 200+ niche sites for global clients.</div><div class="port-results"><span class="port-result">5K+ Links</span><span class="port-result">DA +16 avg</span><span class="port-result">200+ Sites</span></div><div class="tags"><span class="tag">White Hat</span><span class="tag">Manual Outreach</span></div><div style="height:10px;"></div><span class="port-cta">View Details <i class="ti ti-arrow-right"></i></span></div>
+    </div>
+    <div class="port" onclick="openModal('p3')">
+      <div class="port-thumb" style="background:#080016;"><i class="ti ti-robot" style="color:#a78bfa;"></i><span class="port-thumb-label">Delivered</span></div>
+      <div class="port-body"><div class="port-type">AI Automation · CRM</div><div class="port-name">AI-Powered Gmail CRM</div><div class="port-desc">Gmail-integrated CRM with AI reply drafting, deal tracking, and email categorization.</div><div class="port-results"><span class="port-result">20 hrs/wk saved</span><span class="port-result">AI Replies</span><span class="port-result">Auto Tracking</span></div><div class="tags"><span class="tag">Claude API</span><span class="tag">Gmail MCP</span></div><div style="height:10px;"></div><span class="port-cta">View Details <i class="ti ti-arrow-right"></i></span></div>
+    </div>
+    <div class="port" onclick="openModal('p4')">
+      <div class="port-thumb" style="background:#001a10;"><i class="ti ti-chart-bar" style="color:#34d399;"></i><span class="port-thumb-label">Delivered</span></div>
+      <div class="port-body"><div class="port-type">SEO Campaign · Tech Blog</div><div class="port-name">0 → 15K Monthly Traffic</div><div class="port-desc">Full technical SEO overhaul, content strategy, and link building for a tech blog.</div><div class="port-results"><span class="port-result">15K Traffic/mo</span><span class="port-result">6 Months</span><span class="port-result">Page 1 Rankings</span></div><div class="tags"><span class="tag">Technical SEO</span><span class="tag">Content</span></div><div style="height:10px;"></div><span class="port-cta">View Details <i class="ti ti-arrow-right"></i></span></div>
+    </div>
+    <div class="port" onclick="openModal('p5')">
+      <div class="port-thumb" style="background:#001018;"><i class="ti ti-device-mobile" style="color:#60a5fa;"></i><span class="port-thumb-label">Live</span></div>
+      <div class="port-body"><div class="port-type">Mobile App · E-Commerce</div><div class="port-name">React Native Shopping App</div><div class="port-desc">iOS & Android app with Stripe payments, order tracking, and push notifications.</div><div class="port-results"><span class="port-result">4.8★ App Store</span><span class="port-result">iOS + Android</span><span class="port-result">1K+ Downloads</span></div><div class="tags"><span class="tag">React Native</span><span class="tag">Stripe</span></div><div style="height:10px;"></div><span class="port-cta">View Details <i class="ti ti-arrow-right"></i></span></div>
+    </div>
+    <div class="port" onclick="openModal('p6')">
+      <div class="port-thumb" style="background:#1a0800;"><i class="ti ti-shopping-cart" style="color:#C8952A;"></i><span class="port-thumb-label">Live</span></div>
+      <div class="port-body"><div class="port-type">E-Commerce · WooCommerce</div><div class="port-name">WooCommerce Store — 200+ SKUs</div><div class="port-desc">Complete WooCommerce setup with PayPal & Stripe, inventory, and speed optimization.</div><div class="port-results"><span class="port-result">200+ Products</span><span class="port-result">Stripe + PayPal</span><span class="port-result">Speed Optimized</span></div><div class="tags"><span class="tag">WordPress</span><span class="tag">WooCommerce</span></div><div style="height:10px;"></div><span class="port-cta">View Details <i class="ti ti-arrow-right"></i></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PORTFOLIO MODALS ── -->
+<div class="modal-overlay" id="modal-p1" onclick="closeModal('p1')">
+  <div class="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('p1')"><i class="ti ti-x"></i></button>
+    <div class="modal-thumb" style="background:#0f0f00;"><i class="ti ti-tools" style="font-size:60px;color:#C8952A;"></i></div>
+    <div class="modal-type">Web App · Tools Platform · Live</div>
+    <div class="modal-title">UM Tools — ukashamart.com</div>
+    <div class="modal-desc">A free online utility tools platform built with Next.js and deployed on Vercel with Cloudflare CDN. The platform features 21 productivity tools including text converters, SEO tools, calculators, and more — all free, no signup required. Accompanied by 23 SEO-optimized blog posts (800–1200+ words each) with Pakistan-specific examples, comparison tables, and FAQs. Google Analytics 4 integrated for traffic tracking and AdSense for monetization. Email routing via Cloudflare and contact form via FormSpree.</div>
+    <div class="modal-section">Key Results</div>
+    <div class="modal-results"><span class="modal-result">21 Utility Tools</span><span class="modal-result">23 Blog Posts</span><span class="modal-result">PageSpeed 96/100</span><span class="modal-result">Google Analytics</span><span class="modal-result">AdSense Ready</span></div>
+    <div class="modal-section">Tech Stack</div>
+    <div class="tags"><span class="tag">Next.js</span><span class="tag">Vercel</span><span class="tag">Cloudflare</span><span class="tag">FormSpree</span><span class="tag">Google Analytics</span><span class="tag">AdSense</span></div>
+    <div style="height:1.2rem;"></div>
+    <a class="btn-gold" href="https://ukashamart.com" target="_blank"><i class="ti ti-external-link"></i>Visit Live Site</a>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-p2" onclick="closeModal('p2')">
+  <div class="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('p2')"><i class="ti ti-x"></i></button>
+    <div class="modal-thumb" style="background:#001500;"><i class="ti ti-link" style="font-size:60px;color:#22c55e;"></i></div>
+    <div class="modal-type">Link Building · Guest Posting · Ongoing</div>
+    <div class="modal-title">5K+ Backlinks Campaign</div>
+    <div class="modal-desc">Managed a massive-scale guest posting and link building operation serving 300+ global clients across multiple niches. Handled 1,500+ email negotiations with site owners, publishers, and blog admins. Built partnerships with 200+ real niche websites across Tech, Finance, Health, Travel, Fashion, Law, Real Estate, and more. All links are 100% white hat via manual outreach — no PBNs, no link farms. Notable partners include EasyRest.com, SIIT.co, and Post Market Publishing.</div>
+    <div class="modal-section">Key Results</div>
+    <div class="modal-results"><span class="modal-result">5,000+ Links Built</span><span class="modal-result">DA +16 avg improvement</span><span class="modal-result">200+ Partner Sites</span><span class="modal-result">1,500+ Negotiations</span><span class="modal-result">30+ Niches</span></div>
+    <div class="modal-section">Services Used</div>
+    <div class="tags"><span class="tag">Manual Outreach</span><span class="tag">White Hat</span><span class="tag">Niche Relevant</span><span class="tag">DA 20–80+</span><span class="tag">Email Negotiation</span></div>
+    <div style="height:1.2rem;"></div>
+    <a class="btn-gold" href="https://wa.me/923351650895" target="_blank"><i class="ti ti-brand-whatsapp"></i>Get Similar Campaign</a>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-p3" onclick="closeModal('p3')">
+  <div class="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('p3')"><i class="ti ti-x"></i></button>
+    <div class="modal-thumb" style="background:#080016;"><i class="ti ti-robot" style="font-size:60px;color:#a78bfa;"></i></div>
+    <div class="modal-type">AI Automation · CRM System</div>
+    <div class="modal-title">AI-Powered Gmail CRM</div>
+    <div class="modal-desc">A fully custom AI-powered CRM system built for managing a high-volume guest posting email inbox. Integrates directly with Gmail via MCP protocol. Features include: automatic email categorization (active deals, completed, follow-up needed), AI-drafted reply suggestions using Claude API, deal tracking dashboard with status updates, priority scoring for leads, and CSV export. Saved the client 20+ hours per week in email management.</div>
+    <div class="modal-section">Key Results</div>
+    <div class="modal-results"><span class="modal-result">20+ hrs/week saved</span><span class="modal-result">AI Reply Drafting</span><span class="modal-result">Auto Categorization</span><span class="modal-result">Deal Tracking</span><span class="modal-result">CSV Export</span></div>
+    <div class="modal-section">Tech Stack</div>
+    <div class="tags"><span class="tag">Claude API</span><span class="tag">Gmail MCP</span><span class="tag">JavaScript</span><span class="tag">Automation</span><span class="tag">AI Integration</span></div>
+    <div style="height:1.2rem;"></div>
+    <a class="btn-gold" href="https://wa.me/923351650895" target="_blank"><i class="ti ti-brand-whatsapp"></i>Build Similar System</a>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-p4" onclick="closeModal('p4')">
+  <div class="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('p4')"><i class="ti ti-x"></i></button>
+    <div class="modal-thumb" style="background:#001a10;"><i class="ti ti-chart-bar" style="font-size:60px;color:#34d399;"></i></div>
+    <div class="modal-type">SEO Campaign · Tech Blog</div>
+    <div class="modal-title">0 → 15K Monthly Traffic</div>
+    <div class="modal-desc">Took a tech blog from zero organic traffic to 15,000 monthly visitors in just 6 months. Work included a full technical SEO audit and fix (Core Web Vitals, schema markup, sitemap, robots.txt), a 6-month content strategy with 40+ optimized articles targeting long-tail keywords, and a consistent link building campaign with 150+ high-quality backlinks from niche-relevant sites. The site achieved first-page Google rankings for 80+ target keywords.</div>
+    <div class="modal-section">Key Results</div>
+    <div class="modal-results"><span class="modal-result">15K Traffic/month</span><span class="modal-result">80+ Page 1 Rankings</span><span class="modal-result">150+ Backlinks</span><span class="modal-result">40+ Articles</span><span class="modal-result">6 Months</span></div>
+    <div class="modal-section">Services Used</div>
+    <div class="tags"><span class="tag">Technical SEO</span><span class="tag">Content Writing</span><span class="tag">Link Building</span><span class="tag">Guest Posting</span><span class="tag">Keyword Research</span></div>
+    <div style="height:1.2rem;"></div>
+    <a class="btn-gold" href="https://wa.me/923351650895" target="_blank"><i class="ti ti-brand-whatsapp"></i>Start SEO Campaign</a>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-p5" onclick="closeModal('p5')">
+  <div class="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('p5')"><i class="ti ti-x"></i></button>
+    <div class="modal-thumb" style="background:#001018;"><i class="ti ti-device-mobile" style="font-size:60px;color:#60a5fa;"></i></div>
+    <div class="modal-type">Mobile App · E-Commerce</div>
+    <div class="modal-title">React Native Shopping App</div>
+    <div class="modal-desc">A fully featured e-commerce mobile app built with React Native for both iOS and Android. Features include product listings with categories and search, shopping cart and wishlist, Stripe payment integration, order tracking, push notifications, and a vendor dashboard. The app passed Apple App Store review on first submission and maintains a 4.8-star rating. Built in 6 weeks from kickoff to launch.</div>
+    <div class="modal-section">Key Results</div>
+    <div class="modal-results"><span class="modal-result">4.8★ App Store</span><span class="modal-result">iOS + Android</span><span class="modal-result">1K+ Downloads</span><span class="modal-result">6 Week Delivery</span><span class="modal-result">First Submit Pass</span></div>
+    <div class="modal-section">Tech Stack</div>
+    <div class="tags"><span class="tag">React Native</span><span class="tag">Stripe</span><span class="tag">Firebase</span><span class="tag">Push Notifications</span><span class="tag">Redux</span></div>
+    <div style="height:1.2rem;"></div>
+    <a class="btn-gold" href="https://wa.me/923351650895" target="_blank"><i class="ti ti-brand-whatsapp"></i>Build My App</a>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-p6" onclick="closeModal('p6')">
+  <div class="modal" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('p6')"><i class="ti ti-x"></i></button>
+    <div class="modal-thumb" style="background:#1a0800;"><i class="ti ti-shopping-cart" style="font-size:60px;color:#C8952A;"></i></div>
+    <div class="modal-type">E-Commerce · WooCommerce</div>
+    <div class="modal-title">WooCommerce Store — 200+ SKUs</div>
+    <div class="modal-desc">A fully custom WooCommerce store built for a retail client with 200+ products across multiple categories. Includes a custom WordPress theme designed from scratch in Figma, PayPal and Stripe payment gateways, inventory management with low-stock alerts, product import via CSV, mobile-responsive design, and speed optimization (scored 94 on PageSpeed). The store went live in 3 weeks and processed its first 100 orders within the first month.</div>
+    <div class="modal-section">Key Results</div>
+    <div class="modal-results"><span class="modal-result">200+ Products</span><span class="modal-result">PageSpeed 94</span><span class="modal-result">100 Orders Month 1</span><span class="modal-result">3 Week Delivery</span><span class="modal-result">Stripe + PayPal</span></div>
+    <div class="modal-section">Tech Stack</div>
+    <div class="tags"><span class="tag">WordPress</span><span class="tag">WooCommerce</span><span class="tag">Stripe</span><span class="tag">PayPal</span><span class="tag">Custom Theme</span></div>
+    <div style="height:1.2rem;"></div>
+    <a class="btn-gold" href="https://wa.me/923351650895" target="_blank"><i class="ti ti-brand-whatsapp"></i>Build My Store</a>
+  </div>
+</div>
+
+<!-- ── TECH STACK ── -->
+<section class="s">
+  <div class="s-bar"></div>
+  <div class="s-eye">Technologies</div>
+  <div class="s-title">Our Tech Stack</div>
+  <div class="s-sub">Modern tools and frameworks we use to build world-class digital products.</div>
+  <div class="grid-tech">
+    <div class="tech"><i class="ti ti-brand-react"></i><span>React</span></div>
+    <div class="tech"><i class="ti ti-brand-nextjs"></i><span>Next.js</span></div>
+    <div class="tech"><i class="ti ti-brand-nodejs"></i><span>Node.js</span></div>
+    <div class="tech"><i class="ti ti-brand-python"></i><span>Python</span></div>
+    <div class="tech"><i class="ti ti-database"></i><span>MongoDB</span></div>
+    <div class="tech"><i class="ti ti-database"></i><span>PostgreSQL</span></div>
+    <div class="tech"><i class="ti ti-brand-wordpress"></i><span>WordPress</span></div>
+    <div class="tech"><i class="ti ti-brand-figma"></i><span>Figma</span></div>
+    <div class="tech"><i class="ti ti-brand-aws"></i><span>AWS</span></div>
+    <div class="tech"><i class="ti ti-brand-docker"></i><span>Docker</span></div>
+    <div class="tech"><i class="ti ti-brand-github"></i><span>GitHub</span></div>
+    <div class="tech"><i class="ti ti-brand-stripe"></i><span>Stripe</span></div>
+    <div class="tech"><i class="ti ti-brand-google"></i><span>Google Ads</span></div>
+    <div class="tech"><i class="ti ti-cloud"></i><span>Vercel</span></div>
+    <div class="tech"><i class="ti ti-shield"></i><span>Cloudflare</span></div>
+    <div class="tech"><i class="ti ti-robot"></i><span>Claude AI</span></div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section class="s alt" id="pricing">
+  <div class="s-bar"></div>
+  <div class="s-eye">Pricing</div>
+  <div class="s-title">Get a Custom Quote</div>
+  <div class="s-sub">Every project is unique. Contact us and we'll send a tailored quote within 2 hours — no pushy sales, no hidden fees.</div>
+  <div class="grid-price">
+    <div class="plan">
+      <div class="plan-name">Guest Posting & SEO</div>
+      <div class="plan-feats">
+        <div class="plan-feat"><i class="ti ti-check"></i>Guest Posts (DA 20–80+)</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>On-page & Technical SEO</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>Blog Content Writing</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>Link Building Campaigns</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>Monthly Rank Reports</div>
+      </div>
+      <div class="plan-footer">
+        <div class="plan-msg">Starting from <strong>$50/post</strong>. Volume discounts available. Contact us for a niche-specific site list.</div>
+        <div class="plan-btns">
+          <a class="plan-wa" href="https://wa.me/923351650895"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+          <a class="plan-em" href="mailto:agency@ukashamart.com"><i class="ti ti-mail"></i>Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="plan hot">
+      <div class="plan-badge">Most Requested</div>
+      <div class="plan-name">Web & App Development</div>
+      <div class="plan-feats">
+        <div class="plan-feat"><i class="ti ti-check"></i>WordPress / Next.js Websites</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>Custom Software & APIs</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>React Native / Flutter Apps</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>E-Commerce Stores</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>UI/UX Design & Branding</div>
+      </div>
+      <div class="plan-footer">
+        <div class="plan-msg">WordPress from <strong>$299</strong> · Next.js from <strong>$999</strong> · Mobile Apps from <strong>$1,499</strong>. Get your free quote today.</div>
+        <div class="plan-btns">
+          <a class="plan-wa" href="https://wa.me/923351650895"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+          <a class="plan-em" href="mailto:agency@ukashamart.com"><i class="ti ti-mail"></i>Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="plan">
+      <div class="plan-name">Digital Marketing & AI</div>
+      <div class="plan-feats">
+        <div class="plan-feat"><i class="ti ti-check"></i>Facebook & Google Ads</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>Social Media Management</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>AI Chatbots & Automation</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>CRM Systems</div>
+        <div class="plan-feat"><i class="ti ti-check"></i>Cloud & DevOps Setup</div>
+      </div>
+      <div class="plan-footer">
+        <div class="plan-msg">Monthly retainers and one-time project pricing available. Let's discuss your goals first — free consultation.</div>
+        <div class="plan-btns">
+          <a class="plan-wa" href="https://wa.me/923351650895"><i class="ti ti-brand-whatsapp"></i>WhatsApp</a>
+          <a class="plan-em" href="mailto:agency@ukashamart.com"><i class="ti ti-mail"></i>Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="s">
+  <div class="s-bar"></div>
+  <div class="s-eye">Client Reviews</div>
+  <div class="s-title">What Clients Say</div>
+  <div class="s-sub">Real feedback from businesses we've helped grow worldwide.</div>
+  <div class="grid-test">
+    <div class="tcard"><div class="tcard-stars">★★★★★</div><div class="tcard-q">"UM Agency delivered 20 high-quality guest posts in 2 weeks. Our domain authority jumped from 18 to 34. Absolutely phenomenal."</div><div class="tcard-author"><div class="av">DM</div><div><div class="av-name">Delaney Moore</div><div class="av-co">EasyRest.com · USA</div></div></div></div>
+    <div class="tcard"><div class="tcard-stars">★★★★★</div><div class="tcard-q">"Their SEO strategy tripled our organic traffic in 4 months. Very responsive, very professional, and real results."</div><div class="tcard-author"><div class="av">JR</div><div><div class="av-name">James Richardson</div><div class="av-co">SIIT.co · UK</div></div></div></div>
+    <div class="tcard"><div class="tcard-stars">★★★★★</div><div class="tcard-q">"The AI automation system saved us 20 hours per week. Our guest posting inbox runs on complete autopilot now."</div><div class="tcard-author"><div class="av">AM</div><div><div class="av-name">Ahmed Malik</div><div class="av-co">E-Commerce · UAE</div></div></div></div>
+    <div class="tcard"><div class="tcard-stars">★★★★★</div><div class="tcard-q">"Best guest posting service I've used. Every single link was from a real, traffic-receiving site. Zero spam, zero shortcuts."</div><div class="tcard-author"><div class="av">LP</div><div><div class="av-name">Laura Peterson</div><div class="av-co">Post Market Publishing</div></div></div></div>
+    <div class="tcard"><div class="tcard-stars">★★★★★</div><div class="tcard-q">"Our Next.js site scored 96 on PageSpeed and was delivered ahead of schedule. Will absolutely hire again."</div><div class="tcard-author"><div class="av">SK</div><div><div class="av-name">Sarah Kim</div><div class="av-co">SaaS Startup · Canada</div></div></div></div>
+    <div class="tcard"><div class="tcard-stars">★★★★★</div><div class="tcard-q">"Our React Native app passed App Store review first try. Beautiful UI, clean code, 4.8 stars from day one."</div><div class="tcard-author"><div class="av">RT</div><div><div class="av-name">Ravi Thakur</div><div class="av-co">Mobile Startup · India</div></div></div></div>
+  </div>
+</section>
+
+<!-- ── WHY US ── -->
+<section class="s alt">
+  <div class="s-bar"></div>
+  <div class="s-eye">Why Choose Us</div>
+  <div class="s-title">The UM Agency Advantage</div>
+  <div class="s-sub">What makes us different from every other digital agency worldwide.</div>
+  <div class="grid-why">
+    <div class="why"><div class="why-ico"><i class="ti ti-clock"></i></div><div><div class="why-title">On-Time Delivery</div><div class="why-desc">We respect deadlines. Every project ships on schedule with regular progress updates.</div></div></div>
+    <div class="why"><div class="why-ico"><i class="ti ti-shield-check"></i></div><div><div class="why-title">100% White Hat</div><div class="why-desc">All SEO and link building is fully white hat. No shortcuts, no PBNs, no spam — ever.</div></div></div>
+    <div class="why"><div class="why-ico"><i class="ti ti-headset"></i></div><div><div class="why-title">24/7 Support</div><div class="why-desc">Reachable via WhatsApp, email. Response within 2 hours, guaranteed worldwide.</div></div></div>
+    <div class="why"><div class="why-ico"><i class="ti ti-receipt"></i></div><div><div class="why-title">Transparent Pricing</div><div class="why-desc">Clear proposals, no hidden fees. You know exactly what you're getting before you pay.</div></div></div>
+    <div class="why"><div class="why-ico"><i class="ti ti-chart-arrows"></i></div><div><div class="why-title">Proven Worldwide Results</div><div class="why-desc">500+ projects across USA, UK, UAE, Canada, Australia, India and more.</div></div></div>
+    <div class="why"><div class="why-ico"><i class="ti ti-users"></i></div><div><div class="why-title">Dedicated Team</div><div class="why-desc">A dedicated project manager and specialist team — not a freelancer juggling 20 clients.</div></div></div>
+  </div>
+</section>
+
+<!-- ── TEAM ── -->
+<section class="s" id="team">
+  <div class="s-bar"></div>
+  <div class="s-eye">The People</div>
+  <div class="s-title">Meet Our Team</div>
+  <div class="s-sub">Specialists across every discipline — united by one goal: your growth.</div>
+  <div class="grid-team">
+    <div class="tm"><div class="tm-av">U</div><div class="tm-name">Ukasha</div><div class="tm-role">Founder & CEO</div><div class="tags" style="justify-content:center;"><span class="tag">SEO</span><span class="tag">Guest Posting</span><span class="tag">Strategy</span></div></div>
+    <div class="tm"><div class="tm-av">A</div><div class="tm-name">Anas Altaf</div><div class="tm-role">Software Engineer</div><div class="tags" style="justify-content:center;"><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span></div></div>
+    <div class="tm"><div class="tm-av">S</div><div class="tm-name">Sara Malik</div><div class="tm-role">SEO Lead</div><div class="tags" style="justify-content:center;"><span class="tag">Technical SEO</span><span class="tag">Analytics</span></div></div>
+    <div class="tm"><div class="tm-av">Z</div><div class="tm-name">Zain Ahmed</div><div class="tm-role">Mobile Dev</div><div class="tags" style="justify-content:center;"><span class="tag">React Native</span><span class="tag">Flutter</span></div></div>
+    <div class="tm"><div class="tm-av">F</div><div class="tm-name">Fatima Noor</div><div class="tm-role">UI/UX Designer</div><div class="tags" style="justify-content:center;"><span class="tag">Figma</span><span class="tag">Branding</span></div></div>
+    <div class="tm"><div class="tm-av">O</div><div class="tm-name">Omar Sheikh</div><div class="tm-role">Content Lead</div><div class="tags" style="justify-content:center;"><span class="tag">Copywriting</span><span class="tag">PR</span></div></div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="s alt">
+  <div class="s-bar"></div>
+  <div class="s-eye">Questions</div>
+  <div class="s-title">Frequently Asked</div>
+  <div style="height:1.5rem;"></div>
+  <div class="faq-list">
+    <div class="faq open"><div class="faq-q" onclick="fq(this)">How do I get a price quote?<i class="ti ti-plus"></i></div><div class="faq-a">Simply WhatsApp us at +92 335 1650895 or email agency@ukashamart.com with your project details. We'll send a detailed quote within 2 hours — no obligation, completely free.</div></div>
+    <div class="faq"><div class="faq-q" onclick="fq(this)">How long does it take to see SEO results?<i class="ti ti-plus"></i></div><div class="faq-a">Typically 3–6 months for significant organic traffic growth. Guest posting results (DA improvement) are usually visible within 4–8 weeks of links being indexed by Google.</div></div>
+    <div class="faq"><div class="faq-q" onclick="fq(this)">Are your guest posts 100% white hat?<i class="ti ti-plus"></i></div><div class="faq-a">Absolutely. We do manual outreach only — no PBNs, no spam networks, no automated link tools. Every link is from a genuine, traffic-receiving website with real editorial standards.</div></div>
+    <div class="faq"><div class="faq-q" onclick="fq(this)">Do you serve clients outside Pakistan?<i class="ti ti-plus"></i></div><div class="faq-a">Yes — we serve clients worldwide. Our current client base spans USA, UK, UAE, Canada, Australia, India, Europe, and more. 90% of our clients are international.</div></div>
+    <div class="faq"><div class="faq-q" onclick="fq(this)">What payment methods do you accept?<i class="ti ti-plus"></i></div><div class="faq-a">We accept PayPal, Payoneer, Wise, bank transfer, and crypto. For project work: 50% upfront, 50% on delivery. Monthly retainers billed at start of each month.</div></div>
+    <div class="faq"><div class="faq-q" onclick="fq(this)">Can I order a single guest post?<i class="ti ti-plus"></i></div><div class="faq-a">Yes! Single guest posts start from $50 depending on DA and niche. WhatsApp us with your niche and we'll send a live list of available sites with current pricing.</div></div>
+    <div class="faq"><div class="faq-q" onclick="fq(this)">Do you offer post-delivery support?<i class="ti ti-plus"></i></div><div class="faq-a">Yes! We offer monthly maintenance plans covering security updates, performance monitoring, backups, and content updates from $49/month.</div></div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="s" id="contact">
+  <div class="s-bar"></div>
+  <div class="s-eye">Get In Touch</div>
+  <div class="s-title">Start Your Project</div>
+  <div class="s-sub">Tell us what you need — we'll reply within 2 hours with a detailed proposal.</div>
+  <div class="contact-wrap">
+    <div>
+      <div class="ci-list">
+        <div class="ci"><div class="ci-ico"><i class="ti ti-brand-whatsapp"></i></div><div><div class="ci-lbl">WhatsApp (Primary)</div><div class="ci-val">+92 335 1650895</div></div></div>
+        <div class="ci"><div class="ci-ico"><i class="ti ti-brand-whatsapp"></i></div><div><div class="ci-lbl">WhatsApp (Secondary)</div><div class="ci-val">+92 347 7350040</div></div></div>
+        <div class="ci"><div class="ci-ico"><i class="ti ti-mail"></i></div><div><div class="ci-lbl">Business Email</div><div class="ci-val">agency@ukashamart.com</div></div></div>
+        <div class="ci"><div class="ci-ico"><i class="ti ti-mail"></i></div><div><div class="ci-lbl">CEO Email</div><div class="ci-val">ukashaceo@gmail.com</div></div></div>
+        <div class="ci"><div class="ci-ico"><i class="ti ti-globe"></i></div><div><div class="ci-lbl">Website</div><div class="ci-val">agency.ukashamart.com</div></div></div>
+        <div class="ci"><div class="ci-ico"><i class="ti ti-clock"></i></div><div><div class="ci-lbl">Response Time</div><div class="ci-val">Within 2 hours worldwide</div></div></div>
+      </div>
+    </div>
+    <div class="cf">
+      <div class="cf-title">Send Us a Message</div>
+      <div class="cf-sub">Fill in the form and we'll reach out with a free custom quote via WhatsApp or email.</div>
+      <div class="cf-row">
+        <input type="text" placeholder="Your Name" id="f-name">
+        <input type="email" placeholder="Email Address" id="f-email">
+      </div>
+      <div class="cf-row">
+        <input type="text" placeholder="Company / Website URL" id="f-company">
+        <select id="f-service">
+          <option value="">Select a Service</option>
+          <option>Software Engineering</option>
+          <option>Web Development</option>
+          <option>Mobile App Dev</option>
+          <option>Guest Posting</option>
+          <option>SEO Services</option>
+          <option>Content Writing</option>
+          <option>Digital Marketing</option>
+          <option>UI/UX Design</option>
+          <option>AI & Automation</option>
+          <option>E-Commerce</option>
+          <option>Cloud & DevOps</option>
+          <option>Cybersecurity</option>
+        </select>
+      </div>
+      <input type="text" placeholder="Budget / Project Size (optional)" id="f-budget">
+      <textarea placeholder="Describe your project, goals, and timeline..." id="f-msg"></textarea>
+      <div class="cf-btns">
+        <a class="cf-wa-btn" id="wa-send" href="#"><i class="ti ti-brand-whatsapp"></i>Send via WhatsApp</a>
+        <a class="cf-em-btn" id="em-send" href="#"><i class="ti ti-mail"></i>Send via Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="ft-grid">
+    <div>
+      <div class="ft-logo">UM<span>Agency</span></div>
+      <div class="ft-desc">A full-service digital agency offering software engineering, SEO, guest posting, web development, mobile apps, AI automation, and digital marketing. Serving clients worldwide.</div>
+      <div class="ft-soc">
+        <a class="fsi" href="https://wa.me/923351650895"><i class="ti ti-brand-whatsapp"></i></a>
+        <a class="fsi" href="#"><i class="ti ti-brand-linkedin"></i></a>
+        <a class="fsi" href="#"><i class="ti ti-brand-twitter"></i></a>
+        <a class="fsi" href="#"><i class="ti ti-brand-instagram"></i></a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Services</h4>
+      <a href="#services">Software Engineering</a>
+      <a href="#services">Web Development</a>
+      <a href="#services">Mobile Apps</a>
+      <a href="#gp-sites">Guest Posting</a>
+      <a href="#services">SEO Services</a>
+      <a href="#services">Digital Marketing</a>
+    </div>
+    <div class="ft-col">
+      <h4>Company</h4>
+      <a href="#">About Us</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#team">Our Team</a>
+      <a href="#gp-sites">Guest Post Sites</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="ft-col">
+      <h4>Contact</h4>
+      <a href="https://wa.me/923351650895">+92 335 1650895</a>
+      <a href="https://wa.me/923477350040">+92 347 7350040</a>
+      <a href="mailto:agency@ukashamart.com">agency@ukashamart.com</a>
+      <a href="mailto:ukashaceo@gmail.com">ukashaceo@gmail.com</a>
+      <a href="https://agency.ukashamart.com">agency.ukashamart.com</a>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <p>© 2025 <span>UM Agency</span>. All rights reserved.</p>
+    <p>Serving clients worldwide · Built with <span>❤</span></p>
+  </div>
+</footer>
+
+<script>
+// FAQ toggle
+function fq(el) {
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq').forEach(f => f.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// Portfolio modals
+function openModal(id) {
+  document.getElementById('modal-' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById('modal-' + id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(m => {
+      m.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+});
+
+// Contact form → WhatsApp / Email
+function buildMsg() {
+  const name = document.getElementById('f-name').value || 'Not provided';
+  const email = document.getElementById('f-email').value || 'Not provided';
+  const company = document.getElementById('f-company').value || 'Not provided';
+  const service = document.getElementById('f-service').value || 'Not specified';
+  const budget = document.getElementById('f-budget').value || 'Not specified';
+  const msg = document.getElementById('f-msg').value || 'No message';
+  return { name, email, company, service, budget, msg };
+}
+document.getElementById('wa-send').addEventListener('click', function(e) {
+  e.preventDefault();
+  const d = buildMsg();
+  const text = `Hi UM Agency!%0A%0A*Name:* ${d.name}%0A*Email:* ${d.email}%0A*Company:* ${d.company}%0A*Service:* ${d.service}%0A*Budget:* ${d.budget}%0A%0A*Message:*%0A${d.msg}`;
+  window.open(`https://wa.me/923351650895?text=${text}`, '_blank');
+});
+document.getElementById('em-send').addEventListener('click', function(e) {
+  e.preventDefault();
+  const d = buildMsg();
+  const subject = `Project Inquiry — ${d.service}`;
+  const body = `Name: ${d.name}\nEmail: ${d.email}\nCompany: ${d.company}\nService: ${d.service}\nBudget: ${d.budget}\n\nMessage:\n${d.msg}`;
+  window.location.href = `mailto:agency@ukashamart.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
+// Mobile menu
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  if (links.style.display === 'flex') {
+    links.style.display = 'none';
+  } else {
+    links.style.display = 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '60px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = 'rgba(8,8,16,0.98)';
+    links.style.padding = '1rem 2rem';
+    links.style.borderBottom = '1px solid rgba(255,255,255,0.07)';
+    links.style.zIndex = '99';
+  }
+}
+</script>
+</body>
+</html>
