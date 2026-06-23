@@ -9,6 +9,8 @@
 <meta property="og:description" content="Software Engineering, SEO, Guest Posting, Web Development & More. Serving clients worldwide.">
 <meta property="og:url" content="https://agency.ukashamart.com">
 <title>UM Agency — Full-Service Digital Agency</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -30,8 +32,10 @@ body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color
 
 /* ── NAV ── */
 .nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 60px; background: rgba(8,8,16,0.95); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
-.nav-logo { font-size: 17px; font-weight: 900; letter-spacing: -0.5px; text-decoration: none; color: var(--t0); }
-.nav-logo span { color: var(--gold); }
+.nav-logo { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--t0); }
+.nav-logo img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+.nav-logo-text { font-size: 17px; font-weight: 900; letter-spacing: -0.5px; }
+.nav-logo-text span { color: var(--gold); }
 .nav-links { display: flex; gap: 1.8rem; }
 .nav-links a { color: var(--t1); text-decoration: none; font-size: 13px; font-weight: 500; transition: color .18s; }
 .nav-links a:hover { color: var(--gold); }
@@ -270,7 +274,10 @@ body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color
 
 <!-- ── NAV ── -->
 <nav class="nav">
-  <a class="nav-logo" href="#">UM<span>Agency</span></a>
+  <a class="nav-logo" href="#">
+    <img src="logo.png" alt="UM Agency Logo">
+    <div class="nav-logo-text">UM<span>Agency</span></div>
+  </a>
   <div class="nav-links">
     <a href="#services">Services</a>
     <a href="#gp-sites">Guest Posting</a>
@@ -676,35 +683,47 @@ body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color
     </div>
     <div class="cf">
       <div class="cf-title">Send Us a Message</div>
-      <div class="cf-sub">Fill in the form and we'll reach out with a free custom quote via WhatsApp or email.</div>
-      <div class="cf-row">
-        <input type="text" placeholder="Your Name" id="f-name">
-        <input type="email" placeholder="Email Address" id="f-email">
-      </div>
-      <div class="cf-row">
-        <input type="text" placeholder="Company / Website URL" id="f-company">
-        <select id="f-service">
-          <option value="">Select a Service</option>
-          <option>Software Engineering</option>
-          <option>Web Development</option>
-          <option>Mobile App Dev</option>
-          <option>Guest Posting</option>
-          <option>SEO Services</option>
-          <option>Content Writing</option>
-          <option>Digital Marketing</option>
-          <option>UI/UX Design</option>
-          <option>AI & Automation</option>
-          <option>E-Commerce</option>
-          <option>Cloud & DevOps</option>
-          <option>Cybersecurity</option>
-        </select>
-      </div>
-      <input type="text" placeholder="Budget / Project Size (optional)" id="f-budget">
-      <textarea placeholder="Describe your project, goals, and timeline..." id="f-msg"></textarea>
-      <div class="cf-btns">
-        <a class="cf-wa-btn" id="wa-send" href="#"><i class="ti ti-brand-whatsapp"></i>Send via WhatsApp</a>
-        <a class="cf-em-btn" id="em-send" href="#"><i class="ti ti-mail"></i>Send via Email</a>
-      </div>
+      <div class="cf-sub">Fill the form — we'll reply within 2 hours at <strong>agency@ukashamart.com</strong>. Or WhatsApp us directly.</div>
+      <!-- FormSpree form — emails go to agency@ukashamart.com -->
+      <form id="contact-form" action="https://formspree.io/f/xykqzzpy" method="POST">
+        <div class="cf-row">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="cf-row">
+          <input type="text" name="company" placeholder="Company / Website URL">
+          <select name="service">
+            <option value="">Select a Service</option>
+            <option>Software Engineering</option>
+            <option>Web Development</option>
+            <option>Mobile App Dev</option>
+            <option>Guest Posting</option>
+            <option>SEO Services</option>
+            <option>Content Writing</option>
+            <option>Digital Marketing</option>
+            <option>UI/UX Design</option>
+            <option>AI & Automation</option>
+            <option>E-Commerce</option>
+            <option>Cloud & DevOps</option>
+            <option>Cybersecurity</option>
+          </select>
+        </div>
+        <input type="text" name="budget" placeholder="Budget / Project Size (optional)">
+        <textarea name="message" placeholder="Describe your project, goals, and timeline..." required></textarea>
+        <!-- Hidden fields for better email formatting -->
+        <input type="hidden" name="_subject" value="New Project Inquiry — UM Agency">
+        <input type="hidden" name="_next" value="https://agency.ukashamart.com?sent=true">
+        <div class="cf-btns">
+          <button type="submit" class="cf-em-btn" id="form-submit"><i class="ti ti-mail"></i><span id="btn-text">Send via Email</span></button>
+          <a class="cf-wa-btn" id="wa-send" href="#"><i class="ti ti-brand-whatsapp"></i>Send via WhatsApp</a>
+        </div>
+        <div id="form-success" style="display:none;margin-top:12px;padding:12px 14px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:9px;font-size:13px;color:#22c55e;text-align:center;">
+          ✅ Message sent! We'll reply within 2 hours at agency@ukashamart.com
+        </div>
+        <div id="form-error" style="display:none;margin-top:12px;padding:12px 14px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);border-radius:9px;font-size:13px;color:#f87171;text-align:center;">
+          ❌ Something went wrong. Please WhatsApp us directly at +92 335 1650895
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -713,7 +732,10 @@ body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color
 <footer class="footer">
   <div class="ft-grid">
     <div>
-      <div class="ft-logo">UM<span>Agency</span></div>
+      <div class="ft-logo" style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <img src="logo.png" alt="UM Agency" style="width:42px;height:42px;border-radius:50%;object-fit:cover;">
+        <span>UM<span style="color:var(--gold);">Agency</span></span>
+      </div>
       <div class="ft-desc">A full-service digital agency offering software engineering, SEO, guest posting, web development, mobile apps, AI automation, and digital marketing. Serving clients worldwide.</div>
       <div class="ft-soc">
         <a class="fsi" href="https://wa.me/923351650895"><i class="ti ti-brand-whatsapp"></i></a>
@@ -782,28 +804,58 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// Contact form → WhatsApp / Email
-function buildMsg() {
-  const name = document.getElementById('f-name').value || 'Not provided';
-  const email = document.getElementById('f-email').value || 'Not provided';
-  const company = document.getElementById('f-company').value || 'Not provided';
-  const service = document.getElementById('f-service').value || 'Not specified';
-  const budget = document.getElementById('f-budget').value || 'Not specified';
-  const msg = document.getElementById('f-msg').value || 'No message';
-  return { name, email, company, service, budget, msg };
-}
+// ── FormSpree AJAX submission ──
+const contactForm = document.getElementById('contact-form');
+const formSuccess = document.getElementById('form-success');
+const formError = document.getElementById('form-error');
+const btnText = document.getElementById('btn-text');
+const submitBtn = document.getElementById('form-submit');
+
+contactForm.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  // Loading state
+  submitBtn.disabled = true;
+  btnText.textContent = 'Sending...';
+  formSuccess.style.display = 'none';
+  formError.style.display = 'none';
+
+  try {
+    const formData = new FormData(contactForm);
+    const response = await fetch('https://formspree.io/f/xykqzzpy', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      formSuccess.style.display = 'block';
+      contactForm.reset();
+      btnText.textContent = 'Sent ✓';
+    } else {
+      throw new Error('Form error');
+    }
+  } catch (err) {
+    formError.style.display = 'block';
+    btnText.textContent = 'Send via Email';
+  } finally {
+    submitBtn.disabled = false;
+    setTimeout(() => { btnText.textContent = 'Send via Email'; }, 4000);
+  }
+});
+
+// ── WhatsApp button — pulls values from form ──
 document.getElementById('wa-send').addEventListener('click', function(e) {
   e.preventDefault();
-  const d = buildMsg();
-  const text = `Hi UM Agency!%0A%0A*Name:* ${d.name}%0A*Email:* ${d.email}%0A*Company:* ${d.company}%0A*Service:* ${d.service}%0A*Budget:* ${d.budget}%0A%0A*Message:*%0A${d.msg}`;
+  const f = contactForm;
+  const name    = f.querySelector('[name=name]').value || 'Not provided';
+  const email   = f.querySelector('[name=email]').value || 'Not provided';
+  const company = f.querySelector('[name=company]').value || 'Not provided';
+  const service = f.querySelector('[name=service]').value || 'Not specified';
+  const budget  = f.querySelector('[name=budget]').value || 'Not specified';
+  const message = f.querySelector('[name=message]').value || 'No message';
+  const text = encodeURIComponent(
+    `Hi UM Agency! 👋\n\n*Name:* ${name}\n*Email:* ${email}\n*Company:* ${company}\n*Service:* ${service}\n*Budget:* ${budget}\n\n*Message:*\n${message}`
+  );
   window.open(`https://wa.me/923351650895?text=${text}`, '_blank');
-});
-document.getElementById('em-send').addEventListener('click', function(e) {
-  e.preventDefault();
-  const d = buildMsg();
-  const subject = `Project Inquiry — ${d.service}`;
-  const body = `Name: ${d.name}\nEmail: ${d.email}\nCompany: ${d.company}\nService: ${d.service}\nBudget: ${d.budget}\n\nMessage:\n${d.msg}`;
-  window.location.href = `mailto:agency@ukashamart.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 
 // Mobile menu
