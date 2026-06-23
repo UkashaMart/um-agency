@@ -35,7 +35,7 @@ body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color
 /* ── NAV ── */
 .nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 60px; background: rgba(8,8,16,0.95); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
 .nav-logo { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--t0); }
-.nav-logo img { width: 36px; height: 36px; border-radius: 8px; object-fit: cover; object-position: center top; }
+.nav-logo img { width: 38px; height: 38px; border-radius: 50%; object-fit: contain; background: transparent; }
 .nav-logo-text { font-size: 17px; font-weight: 900; letter-spacing: -0.5px; }
 .nav-logo-text span { color: var(--gold); }
 .nav-links { display: flex; gap: 1.8rem; }
@@ -735,7 +735,7 @@ body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color
   <div class="ft-grid">
     <div>
       <div class="ft-logo" style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
-        <img src="logo.png" alt="UM Agency" style="width:40px;height:40px;border-radius:8px;object-fit:cover;object-position:center top;">
+        <img src="logo.png" alt="UM Agency" style="width:42px;height:42px;border-radius:50%;object-fit:contain;background:transparent;">
         <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="32" height="32" rx="8" fill="#C8952A"/>
           <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-weight="900" font-size="13" fill="#060400">UM</text>
